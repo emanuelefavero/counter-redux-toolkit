@@ -7,11 +7,13 @@ import {
 } from '../redux/counter'
 
 function Counter() {
-  const count = useSelector((state) => state.counter.value)
   const dispatch = useDispatch()
+
+  const count = useSelector((state) => state.counter.value)
+
   return (
     <>
-      <h1>{count}</h1>
+      <h2>{count}</h2>
       <button onClick={() => dispatch(increment())}>Increment</button>
       <button onClick={() => dispatch(decrement())}>Decrement</button>
       <button onClick={() => dispatch(incrementByAmount(5))}>
