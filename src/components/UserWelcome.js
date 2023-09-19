@@ -17,6 +17,12 @@ export default function UserWelcome() {
     <>
       <h1>Hello {name}</h1>
       <p>You are {age}</p>
+
+      <input
+        placeholder='Write new name...'
+        type='text'
+        onChange={(e) => dispatch(setName(e.target.value))}
+      />
     </>
   )
 }
